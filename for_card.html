@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./CSS/for_card.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav_container">
+            <div class="top_area ta_bs col-12">
+                <div class="arrow">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="top_area_text ">魔物資料</div>
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="btw_area ba_bs col-12">
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">種族
+                    </button>
+                    <div class="dropdown-menu  " aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">無形</button>
+                        <button class="dropdown-item" type="button">人形</button>
+                        <button class="dropdown-item" type="button">植物</button>
+                        <button class="dropdown-item" type="button">動物</button>
+                        <button class="dropdown-item" type="button">昆蟲</button>
+                        <button class="dropdown-item" type="button">魚貝</button>
+                        <button class="dropdown-item" type="button">天使</button>
+                        <button class="dropdown-item" type="button">惡魔</button>
+                        <button class="dropdown-item" type="button">不死</button>
+                        <button class="dropdown-item" type="button">龍</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        屬性
+                    </button>
+                    <div class="dropdown-menu  " aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">無</button>
+                        <button class="dropdown-item" type="button">地</button>
+                        <button class="dropdown-item" type="button">風</button>
+                        <button class="dropdown-item" type="button">水</button>
+                        <button class="dropdown-item" type="button">火</button>
+                        <button class="dropdown-item" type="button">聖</button>
+                        <button class="dropdown-item" type="button">闇</button>
+                        <button class="dropdown-item" type="button">念</button>
+                        <button class="dropdown-item" type="button">不死</button>
+                        <button class="dropdown-item" type="button">毒</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        體型
+                    </button>
+                    <div class="dropdown-menu  " aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">大型</button>
+                        <button class="dropdown-item" type="button">中型</button>
+                        <button class="dropdown-item" type="button">小型</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        類型
+                    </button>
+                    <div class="dropdown-menu  " aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">普通</button>
+                        <button class="dropdown-item" type="button">MINI BOSS</button>
+                        <button class="dropdown-item" type="button">MVP BOSS</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        排序
+                    </button>
+                    <div class="dropdown-menu  " aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">默認排序</button>
+                        <button class="dropdown-item" type="button" id="desc">等級低至高</button>
+                        <button class="dropdown-item" type="button" id="asc">等級高至低</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container monster_area ">
+
+
+
+        </div>
+    </main>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="monster.json"></script>
+    <script>
+        fetch("monster.json")
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (monstersDate) {
+                //console.log(monstersDate);
+                var monsters = monstersDate.data.list;//要用var不然會出錯
+                //console.log(monsters);
+
+                monsters.forEach(monster => {
+
+                    var name = monster.name;
+                    var race_code = monster.race;
+                    var nature_code = monster.nature;
+                    var size_code = monster.size;
+                    var hp = monster.hp;
+                    var lv = monster.level;
+                    var img = monster.avatar;
+                    var type_code = monster.type;
+                    console.log(type)
+                    //console.log(img)
+                    //console.log(nature_code)
+                    var raceOb = {
+                        0: "無形",
+                        1: "人形",
+                        2: "植物",
+                        3: "動物",
+                        4: "昆蟲",
+                        5: "魚貝",
+                        6: "天使",
+                        7: "惡魔",
+                        8: "不死",
+                        9: "龍"
+                    }
+                    var natureOb = {
+                        0: "無",
+                        1: "地",
+                        2: "風",
+                        3: "水",
+                        4: "火",
+                        5: "聖",
+                        6: "闇",
+                        7: "念",
+                        8: "不死",
+                        9: "毒"
+                    }
+                    var sizeOb = {
+                        1: "小型",
+                        2: "中型",
+                        3: "大型"
+                    }
+                    var typeOb = {
+                        2: "4px 1px",
+                        1: "-39px 1px",
+                        0: "4px -36px"
+                    }
+
+                    for (let i in raceOb) {
+                        if (race_code == i) {
+                            var race = raceOb[i]
+                            //console.log(race)
+                        }
+                    }
+
+                    for (let i in natureOb) {
+                        if (nature_code == i) {
+                            var nature = natureOb[i]
+                            //console.log(nature)
+                        }
+                    }
+
+                    for (let i in sizeOb) {
+                        if (size_code == i) {
+                            var size = sizeOb[i]
+                            //console.log(size)
+                        }
+                    }
+                    for (let i in typeOb) {
+                        if (type_code == i) {
+                            var type = typeOb[i]
+                            //console.log(size)
+                        }
+                    }
+                    var monster_area = document.querySelector('.monster_area');
+                    monster_area.innerHTML += `
+                    <div class="mon_card col-md-6 col-12">
+                        <div class="row">
+                            <figure class="l_mcard col-6">
+                                <div class="img_area" style:"">
+                    <img src="https://images.weserv.nl/?url=rostatic.zhaiwuyu.com/face/${img}.png" alt="">
+                    <div class="smallimg" style ="background-position:${type} ;"></div>
+                                </div>
+                                <figcaption class="mnane">${name}</figcaption>
+                                <div class="property">
+                                    <span>${race} </span>&frasl;
+                                    <span>${nature} </span>&frasl;
+                                    <span>${size}</span>
+                                </div>
+                            </figure>
+                            <div class="r_mcard col-6">
+                                <div class="lvhpbox">
+                                    <div class="lv">
+                                        <span class="mr-3">LV</span>
+                                        <span>${lv}</span>
+                                    </div>
+                                    <div class="hp">
+                                        <span class="mr-3">HP</span>
+                                        <span>${hp}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    `
+
+                    /*var myIdElement = document.querySelectorAll('.l_mcard')
+                    var style = document.createElement("style");//用JS操作偽元素
+                    document.head.appendChild(style);
+                    sheet = style.sheet;
+                    sheet.insertRule(`.l_mcard::before {background-image:url(https://images.weserv.nl/?url=rosc3.zhaiwuyu.com/m/img/monster-icon.png?version=20190619);background-position: }`, 0);*/
+
+                })
+
+
+
+
+
+
+
+            });
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+body nav .nav_container .top_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body nav .nav_container .ta_bs {
+  background-color: #4A89DC;
+  color: #ffffff;
+  font-size: 1.25em;
+}
+
+body nav .nav_container .btw_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: inset 0px -2px #7E7F7C;
+          box-shadow: inset 0px -2px #7E7F7C;
+}
+
+body nav .nav_container .ba_bs {
+  color: #7E7F7C;
+  font-size: 1em;
+}
+
+body nav .nav_container .ba_bs .dropdown .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body main .monster_area {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .monster_area .mon_card .row .l_mcard {
+  color: #3F97CE;
+  position: relative;
+}
+
+body main .monster_area .mon_card .row .l_mcard .img_area {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  border: #9DC6E6 3px solid;
+}
+
+body main .monster_area .mon_card .row .l_mcard .img_area .smallimg {
+  background-image: url("https://images.weserv.nl/?url=rosc3.zhaiwuyu.com/m/img/monster-icon.png?");
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  overflow: hidden;
+}
+
+body main .monster_area .mon_card .row .l_mcard .img_area img {
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+}
+
+body main .monster_area .mon_card .row .l_mcard .mnane {
+  font-size: 1em;
+}
+
+body main .monster_area .mon_card .row .l_mcard .property {
+  font-size: 0.9em;
+}
+
+body main .monster_area .mon_card .row .r_mcard .lvhpbox {
+  width: 100%;
+  height: 48px;
+  background-color: #EEEEEE;
+  border-radius: 3px;
+  font-size: 0.8em;
+  padding-left: 10px;
+}
+/*# sourceMappingURL=for_card.css.map */
